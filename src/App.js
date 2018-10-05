@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from "axios";
-import CurrentWeather from "./CurrentWeather";
-import CurrentWeather2 from "./CurrentWeather2";
-import FiveDay from "./FiveDay";
+// import CurrentWeather from "./CurrentWeather";
+import Weather from "./Weather";
 
 class App extends React.Component {
   constructor() {
@@ -83,19 +81,15 @@ class App extends React.Component {
         </div>
 
         {submitted ? (
-          <div>
-            <CurrentWeather2
+          
+            <Weather
               city={city}
               metric={metric}
               unitFormat={unitFormat}
             />
-            {/* <FiveDay city={city} metric={metric} unitFormat={unitFormat} /> */}
-          </div>
         ) : (
           ""
         )}
-
-
       </div>
     );
   }
