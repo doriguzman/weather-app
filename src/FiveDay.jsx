@@ -15,9 +15,12 @@ const FiveDay = ({ data }) => {
     "Friday",
     "Saturday"
   ];
-  for (let i = 0; i < data.list.length; i += 8) {
+  for (let i = 0; i < data.list.length; i ++) {
+      if(data.list[i].dt_txt.slice(11,13) ==='12'){
     let date = new Date(data.list[i].dt_txt);
+
     let day = {
+        reg:data.list[i].dt_txt,
       day: days[date.getDay()],
       icon: data.list[i].weather[0].icon,
       temp: Math.round(data.list[i].main.temp),
@@ -29,6 +32,7 @@ const FiveDay = ({ data }) => {
     };
     obj = [...obj, day];
   }
+}
 
   console.log(obj);
   return (
@@ -38,8 +42,7 @@ const FiveDay = ({ data }) => {
         return (
           <div className="card">
             <h2> {elem.day}</h2>
-            <img />
-
+            <img src={`http://openweathermap.org/img/w/${elem.icon}.png`}/>
             <h3>
               {elem.max_temp}
               <br />

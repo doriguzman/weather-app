@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 const Current =({data})=>{
 return(
     <div className="current-weather-div"> 
-    <img />
+    <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}/>
     <h2>Current Weather in {data.name}</h2>
     <h3>
       {" "}
