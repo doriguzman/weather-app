@@ -41,7 +41,7 @@ class App extends React.Component {
     this.setState({
       submitted: true,
       city: this.state.input,
-      input: ""
+      // input: ""
     });
   };
 

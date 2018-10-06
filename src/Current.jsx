@@ -7,14 +7,14 @@ return(
     <h2>Current Weather in {data.name}</h2>
     <h3>
       {" "}
-      {data.weather[0].description} , {data.main.temp}
+      {data.weather[0].description} , {Math.round(data.main.temp)}
     </h3>
     <div className="current-Weather-Left">
       <p>
-        <span>High:</span> {data.main.temp_max}
+        <span>High:</span> {Math.round(data.main.temp_max)}
         <br />
         <span>Low: </span>
-        {data.main.temp_min}
+        {Math.round(data.main.temp_min)}
       </p>
     </div>
     <div>
