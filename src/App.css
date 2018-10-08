@@ -1,20 +1,40 @@
-html{
-  min-height:100%;
+html {
+  min-height: 100%;
   position: relative;
 }
 
-body{
-  background: linear-gradient(to bottom, #01758e 0%,#027f96 6%,#01829a 12%,#0188a0 19%,#0089a1 25%,#018aa4 30%,#058fa6 35%,#0693a7 42%,#0098a9 52%,#119cab 60%,#16a1ae 67%,#20abb2 75%,#26b1b4 82%,#2cb8b7 89%,#3bc6bd 100%);
-  font-family: 'PT Sans Narrow', sans-serif;
-  color:white
+body {
+  background: linear-gradient(
+    to bottom,
+    #01758e 0%,
+    #027f96 6%,
+    #01829a 12%,
+    #0188a0 19%,
+    #0089a1 25%,
+    #018aa4 30%,
+    #058fa6 35%,
+    #0693a7 42%,
+    #0098a9 52%,
+    #119cab 60%,
+    #16a1ae 67%,
+    #20abb2 75%,
+    #26b1b4 82%,
+    #2cb8b7 89%,
+    #3bc6bd 100%
+  );
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white;
 }
 
-.submit-center{
+.title-center {
+  margin-bottom: -40px;
+}
+.submit-center {
   /* font-family: 'PT Sans Narrow', sans-serif; */
-  text-align:center;
-  width:100%;
-  height:50%;
-  color:white;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  color: white;
   position: absolute;
   margin: auto;
   top: 0;
@@ -24,47 +44,96 @@ body{
   font-size: 50px;
 }
 
-.app-title{
-  margin-bottom:10px;
+.location-center {
+  display: inline-flex;
+  width: 47%;
 }
 
 .text-input-center {
-  width:20%;
-  height:30px;
+  width: 100%;
+  height: 30px;
   vertical-align: middle;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-left: 15px;
   border: 1px solid grey;
-
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 35px;
+  padding: 14px 0 5px 8px;
+  letter-spacing: 1px;
 }
 
-button{
-
-  width: 10%;
-  padding: 7px;
-  background: #2196F3;
+button {
+  width: 15%;
+  height: 52px;
+  margin-top: 2px;
+  padding: 15px;
+  background: #2196f3;
   color: white;
-  font-size: 17px;
+  font-size: 19px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
   vertical-align: middle;
-  margin-bottom: 5px;
 }
 
-button:hover{
-  background:#0b7dda
+button:hover {
+  background: #0b7dda;
 }
 
-/* label{
-  margin:15px;
-} */
-
-.metric{
-  text-align:center;
-  font-size:35px;
+.metric-center {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
 }
-.radio-input-center{
-  vertical-align:middle;
-  margin:0 10px 0 10px;
-  margin-bottom:2px;
+.radio {
+  vertical-align: middle;
+  margin: 0 10px 0 10px;
+  margin-bottom: 2px;
+}
+
+/* when header is at the top */
+
+.submit-top {
+  font-size: 25px;
+  width: 100%;
+  /* margin-right: 80px; */
+  display: inline-flex;
+  /* margin-top:10px; */
+  padding: 0px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.title-top {
+  margin-left: 20px;
+}
+.location-top {
+  display: inline-flex;
+  width: 30%;
+  font-size: 28px;
+  margin-bottom:5px;
+}
+
+.text-input-top {
+  margin-left: 10px;
+  width: 400px;
+  height: 10px;
+  border: 1px solid grey;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 23px;
+  margin-top: -2px;
+  padding: 14px 0 7px 8px;
+  letter-spacing: 1px;
+}
+
+.button-top{
+  margin-top:-2px;
+  height:33px;
+  padding: 0px;
+}
+
+.metric-top {
+  margin-right: 1.5%;
+  font-size: 22px;
+  margin-left: -1%;
 }

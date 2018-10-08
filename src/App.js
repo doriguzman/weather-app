@@ -49,35 +49,37 @@ class App extends React.Component {
     const { input, city, current, metric, submitted, unitFormat } = this.state;
     return (
       <div className="App">
-        <div className={this.state.submitted ? "submit-top" : "submit-center"}>
-          <h2 className="app-title"> Weather App</h2>
-          <div className="location">
-            Your Location{" "}
+        <div className={submitted ? "submit-top" : "submit-center"}>
+          {/* submit-center */}
+          <div className={submitted ? "title-top" : "title-center"}>
+            {" "}
+            <h2> Weather App</h2>{" "}
+          </div>
+          <div className={submitted ? "location-top" : "location-center"}>
+            Location{" "}
             <input
-              className={
-                this.state.submitted ? "text-input-top" : "text-input-center"
-              }
+              className={submitted ? "text-input-top" : "text-input-center"}
               type="text"
               name="input"
               value={input}
               onChange={this.handleInput}
             />
-            <button type="submit" onClick={this.handleSubmit}>
+            <button
+              type="submit"
+              className={submitted ? "button-top" : ""}
+              onClick={this.handleSubmit}
+            >
               <i class="fa fa-search" />
             </button>
           </div>
-          <div className="metric">
+          <div className={submitted ? "metric-top" : "metric-center"}>
             {/* <label>Metric:</label> */}
             {this.radioOptions.map(value => (
               <span>
                 {" "}
                 {value}{" "}
                 <input
-                  className={
-                    this.state.submitted
-                      ? "radio-input-top"
-                      : "radio-input-center"
-                  }
+                  className="radio"
                   type="radio"
                   name="metric"
                   value={value}
