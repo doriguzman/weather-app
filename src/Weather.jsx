@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import FiveDay from "./FiveDay";
 import Current from "./Current";
+import './Current.css'
+
 
 class Weather extends React.Component {
   constructor(props) {
@@ -55,7 +57,7 @@ class Weather extends React.Component {
 
     if (currentData && fiveDayData) {
       return (
-        <div>
+        <div className='weather-container'>
           <Current data={currentData} />
           <FiveDay data={fiveDayData} />
         </div>

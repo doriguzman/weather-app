@@ -1,19 +1,18 @@
 import React, { Component } from "react";
-import axios from "axios";
-
+import './FiveDay.css'
 const FiveDay = ({ data }) => {
   console.log(data);
   // the data.list return an array of 40 objects
   //at every 8th it returns a new day
   let obj = [];
   let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+    "SUN",
+    "MON",
+    "TUE",
+    "WED",
+    "THU",
+    "FRI",
+    "SAT"
   ];
   for (let i = 0; i < data.list.length; i ++) {
       if(data.list[i].dt_txt.slice(11,13) ==='12'){
@@ -36,18 +35,18 @@ const FiveDay = ({ data }) => {
 
   console.log(obj);
   return (
-    <div className="five-day-weather-div">
-      5 day
+    <div className="five-day-weather">
       {obj.map(elem => {
         return (
           <div className="card">
-            <h2> {elem.day}</h2>
-            <img src={`http://openweathermap.org/img/w/${elem.icon}.png`}/>
-            <h3>
-              {elem.max_temp}
-              <br />
+           <div className='day'> <p>{elem.day}</p></div>
+           <div className='five-day-img-container'> <img className='five-day-img' src={`http://openweathermap.org/img/w/${elem.icon}.png`}/></div>
+            <div className='temp'>
+              {elem.max_temp}&deg;
+              
               {/* {elem.min_temp} */}
-            </h3>
+            
+            </div>
           </div>
         );
       })}

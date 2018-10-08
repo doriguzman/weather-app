@@ -1,0 +1,37 @@
+.five-day-weather{
+    box-shadow:1px 1px 1px 1px blue;
+    border-radius: 8px; 
+    padding:10px;
+    margin:0 auto;
+    margin-top:20px;
+    width:65%;
+    height:170px;
+    display:flex;
+}
+
+.card{
+    margin-right:8%;
+    margin-left: 6%;
+    font-size: 30px;
+}
+.day{
+    margin-top: -20px;
+    margin-bottom: -37px;
+    padding-left:2px;
+}
+.five-day-img-container{
+    display:flex;
+    width: 225%;
+    height: 90px;
+    margin-left:-23px;
+    margin-bottom:-10px;
+}
+.five-day-img{
+    width:100%;
+}
+
+.temp{
+    width:10px;
+    
+    padding-left:7px;
+}

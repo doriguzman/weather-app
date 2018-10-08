@@ -1,0 +1,15 @@
+
+.weather-container{
+    margin:40px;
+    width:100%;
+
+}
+.current-weather-div{
+    box-shadow:7px 1px 30px 10px blue;
+    border-radius: 8px; 
+    padding:10px;
+    margin:0 auto;
+    width:65%;
+    height:350px;
+
+}

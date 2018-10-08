@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import './Current.css'
 const Current =({data})=>{
 return(
     <div className="current-weather-div"> 
