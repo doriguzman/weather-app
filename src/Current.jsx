@@ -28,7 +28,7 @@ const Current = ({ data }) => {
           {Math.round(data.main.temp_min)}
           &deg;
           <span>
-            <i className="fa fa-long-arrow-up" />{" "}
+            <i className="fa fa-long-arrow-up"  />{" "}
             {Math.round(data.main.temp_max)}
             &deg;
           </span>
