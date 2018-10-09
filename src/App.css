@@ -128,10 +128,10 @@ button:hover {
 
 .button-top{
   margin-top:-2px;
-  height:33px;
-  padding: 10px;
+  height: 33px;
+  padding: 7px;
   vertical-align: middle;
-
+  font-size: 16px;
 }
 
 .metric-top {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Current.css";
-const Current = ({ data }) => {
-  console.log(data);
+const Current = ({ data, metric }) => {
   let days = [
     "SUNDAY",
     "MONDAY",
@@ -12,13 +11,12 @@ const Current = ({ data }) => {
     "SATURDAY"
   ];
   let date = new Date();
-  let month= date.getUTCMonth()+1 //month from 1-12 
+  let month = date.getUTCMonth() + 1; //month from 1-12
   let day = date.getUTCDate();
   let year = date.getUTCFullYear();
-  let fullDate= day + '/' + month + '/' + year
+  let fullDate = day + "/" + month + "/" + year;
   let currentDay = days[date.getDay()];
-  console.log(date);
-  console.log(currentDay);
+
   return (
     <div className="current-weather">
       <div className="top-line">
@@ -28,7 +26,7 @@ const Current = ({ data }) => {
           {Math.round(data.main.temp_min)}
           &deg;
           <span>
-            <i className="fa fa-long-arrow-up"  />{" "}
+            <i className="fa fa-long-arrow-up" />{" "}
             {Math.round(data.main.temp_max)}
             &deg;
           </span>
@@ -37,14 +35,15 @@ const Current = ({ data }) => {
       <div className="middle">
         <div className="middle-left">
           <p className="date">
-          <span className='todays-day'>{currentDay}</span> 
+            <span className="todays-day">{currentDay}</span>
             <br />
-           <span className='full-date'>{fullDate} </span>
-             </p>
+            <span className="full-date">{fullDate} </span>
+          </p>
 
-             <p className="weather-details">
-            <span >
-              Wind: {data.wind.speed}
+          <p className="weather-details">
+            <span>
+              Wind: {data.wind.speed}{" "}
+              {metric === "Fahrenheit" ? <span>mph</span> : <span>m/h</span>}
               <br />
               Humidity: {data.main.humidity}%
             </span>
@@ -55,13 +54,13 @@ const Current = ({ data }) => {
             src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
           />
 
-         <p className='weather-description'> {data.weather[0].description}</p>
+          <p className="weather-description"> {data.weather[0].description}</p>
         </div>
         <div className="middle-right">
-           {Math.round(data.main.temp)}&deg;
+          {Math.round(data.main.temp)}
+          &deg;
         </div>
       </div>
-  
     </div>
   );
 };

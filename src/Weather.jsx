@@ -58,7 +58,7 @@ class Weather extends React.Component {
     if (currentData && fiveDayData) {
       return (
         <div className='weather-container'>
-          <Current data={currentData} />
+          <Current data={currentData} metric={this.props.metric}/>
           <FiveDay data={fiveDayData} />
         </div>
       );
