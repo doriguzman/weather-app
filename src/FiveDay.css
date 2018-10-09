@@ -3,28 +3,28 @@
     border-radius: 8px; 
     padding:10px;
     margin:0 auto;
-    margin-top:20px;
+    margin-top:33px;
     width:65%;
-    height:170px;
+    height:190px;
     display:flex;
 }
 
 .card{
+    margin-top:-5px;
     margin-right:8%;
     margin-left: 6%;
     font-size: 30px;
 }
 .day{
-    margin-top: -20px;
     margin-bottom: -37px;
     padding-left:2px;
 }
 .five-day-img-container{
     display:flex;
     width: 225%;
-    height: 90px;
-    margin-left:-23px;
-    margin-bottom:-10px;
+    height: 130px;
+    margin-left:-22px;
+    margin-bottom:-37px;
 }
 .five-day-img{
     width:100%;
@@ -32,6 +32,5 @@
 
 .temp{
     width:10px;
-    
-    padding-left:7px;
+    padding-left:8px;
 }
