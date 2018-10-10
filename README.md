@@ -31,15 +31,21 @@ IMAGE
 
 ## Future Features:
 * Implement usage of zipcodes.
+
 * Use the Five Day Forecast API to full extent:
     *  OnClick of day it would expand and show the weather every 3 hours for that day. 
+    
 * Fix CSS of submit bar to be more visually appealing. 
 
 
 ## Built Using:  
+
 * [Open Weather Map API](https://openweathermap.org/api)
+
 * JavaScript(ES2016)
+
 * React
+
 * CSS
 
 ## Available Scripts
