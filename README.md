@@ -15,7 +15,7 @@ IMAGE
 ## Thought Process on App
 
 * I wanted to implement a simple, user-friendly, and attractive weather app.
-* Originally the [OpenWeatherMap forecast API](https://openweathermap.org/forecast16) given is a paid api. Thus I decided to use two apis: one for the [Current Weather](https://openweathermap.org/current) and one for the [Five Day Forecast](https://openweathermap.org/forecast5). 
+* Originally the [OpenWeatherMap forecast API](https://openweathermap.org/forecast16) given is a paid API. Thus I decided to use two APIs: one for the [Current Weather](https://openweathermap.org/current) and one for the [Five Day Forecast](https://openweathermap.org/forecast5). 
 * People use different units to measure temperature, so I'm giving people the option to choose their preferred measurement through radio buttons. 
 * For the current weather I wanted to display only the most important data as to not overwhelm the user. Thus only displaying:
  day/date, weather description, wind speed,  humidity, and  high/lows for that day. 
