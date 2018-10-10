@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './FiveDay.css'
 const FiveDay = ({ data }) => {
-  console.log(data);
+  
   // the data.list return an array of 40 objects
   //at every 8th it returns a new day
   let obj = [];

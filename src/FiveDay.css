@@ -1,5 +1,6 @@
 .five-day-weather{
-    box-shadow:1px 1px 1px 1px blue;
+    box-shadow:1px 1px 30px 2px #3bc6bd;
+    background:linear-gradient(135deg, #b7deed 0%,#3bc6bd 8%,#0199b7 37%,#018eaa 55%,#3bc6bd 92%,#b7deed 100%);
     border-radius: 8px; 
     padding:10px;
     margin:0 auto;

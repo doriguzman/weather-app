@@ -1,64 +1,104 @@
 import React, { Component } from "react";
 import "./App.css";
-// import CurrentWeather from "./CurrentWeather";
-import Weather from "./Weather";
-
+import axios from "axios";
+// import Weather from "./Weather";
+import FiveDay from "./FiveDay";
+import Current from "./Current";
 class App extends React.Component {
   constructor() {
     super();
-    this.radioOptions = ["Kelvin", "Fahrenheit", "Celsius"];
+    this.radioOptions = ["Kelvin", "Celsius", "Fahrenheit"];
+    this.unitFormatObj = {
+      Kelvin: "",
+      Celsius: "metric",
+      Fahrenheit: "imperial"
+    };
     this.state = {
-      submitted: false,
+      valid: false,
       input: "",
       city: "",
       metric: "Fahrenheit",
-      unitFormat: "imperial"
+      unitFormat: "imperial",
+      errorMessage: ""
     };
   }
 
   handleInput = e => {
+    let unitFormat;
     this.setState({
       [e.target.name]: e.target.value
     });
-    if (e.target.value === "Fahrenheit") {
+
+    if (e.target.name === "metric") {
+      unitFormat = this.unitFormatObj[e.target.value];
       this.setState({
-        unitFormat: "imperial"
+        unitFormat: this.unitFormatObj[e.target.value]
       });
-    } else if (e.target.value === "Celsius") {
-      this.setState({
-        unitFormat: "metric"
-      });
-    } else if (e.target.value === "Kelvin") {
-      this.setState({
-        unitFormat: ""
-      });
+      this.renderApi(this.state.city, unitFormat);
     }
+  };
+
+  renderApi = (city, unitFormat) => {
+    axios
+      .all([
+        axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unitFormat}&APPID=654b4bc63dca7307ee635f91f0d41465`
+        ),
+        axios.get(
+          `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unitFormat}&APPID=654b4bc63dca7307ee635f91f0d41465`
+        )
+      ])
+      .then(
+        axios.spread((currentRes, fiveDayRes) => {
+          this.setState({
+            valid: true,
+            currentData: currentRes.data,
+            fiveDayData: fiveDayRes.data,
+            errorMessage: ""
+          });
+        })
+      )
+      .catch(error => {
+        this.setState({
+          errorMessage: "Enter a valid city (i.e. San Francisco)"
+        });
+      });
   };
 
   handleSubmit = e => {
     console.log("submitting");
-    e.preventDefault();
     this.setState({
-      submitted: true,
       city: this.state.input
     });
+    this.renderApi(this.state.input, this.state.unitFormat);
   };
 
   render() {
     console.log(this.state);
-    const { input, city, current, metric, submitted, unitFormat } = this.state;
+    const {
+      input,
+      city,
+      current,
+      metric,
+      submitted,
+      unitFormat,
+      errorMessage,
+      valid,
+      currentData,
+      fiveDayData
+    } = this.state;
     return (
       <div className="App">
-        <div className={submitted ? "submit-top" : "submit-center"}>
+        <div className={valid ? "submit-top" : "submit-center"}>
           {/* submit-center */}
-          <div className={submitted ? "title-top" : "title-center"}>
+          <div className={valid ? "title-top" : "title-center"}>
             {" "}
             <h2> Weather App</h2>{" "}
           </div>
-          <div className={submitted ? "location-top" : "location-center"}>
-            Location{" "}
+          <div className={valid ? "location-top" : "location-center"}>
+            <label>City</label>
             <input
-              className={submitted ? "text-input-top" : "text-input-center"}
+              className={valid ? "text-input-top" : "text-input-center"}
               type="text"
               name="input"
               value={input}
@@ -66,13 +106,19 @@ class App extends React.Component {
             />
             <button
               type="submit"
-              className={submitted ? "button-top" : ""}
+              className={valid ? "button-top" : ""}
               onClick={this.handleSubmit}
             >
               <i class="fa fa-search" />
             </button>
+            <div
+              className={valid ? "error-message-top" : "error-message-center"}
+            >
+              {errorMessage}{" "}
+            </div>
           </div>
-          <div className={submitted ? "metric-top" : "metric-center"}>
+
+          <div className={valid ? "metric-top" : "metric-center"}>
             {/* <label>Metric:</label> */}
             {this.radioOptions.map(value => (
               <span>
@@ -91,8 +137,11 @@ class App extends React.Component {
           </div>
         </div>
 
-        {submitted ? (
-          <Weather city={city} metric={metric} unitFormat={unitFormat} />
+        {valid ? (
+          <div>
+            <Current data={currentData} metric={metric} />
+            <FiveDay data={fiveDayData} />
+          </div>
         ) : (
           ""
         )}

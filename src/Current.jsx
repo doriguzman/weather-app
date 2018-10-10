@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Current.css";
 const Current = ({ data, metric }) => {
+    // console.log(data, data.data)
   let days = [
     "SUNDAY",
     "MONDAY",
