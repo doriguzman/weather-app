@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import '../Stylesheets/FiveDay.css'
+
+
 const FiveDay = ({ data }) => {
   
-  // the data.list return an array of 40 objects
-  //at every 8th it returns a new day
+  // constructing an array of day objects
   let obj = [];
+
+  // using the days array to help display the abbreviated day
   let days = [
     "SUN",
     "MON",
@@ -14,6 +17,11 @@ const FiveDay = ({ data }) => {
     "FRI",
     "SAT"
   ];
+
+
+  // the data.list return an array of 40 objects
+  //we are retrieving the weather data everyday at 12pm
+
   for (let i = 0; i < data.list.length; i ++) {
       if(data.list[i].dt_txt.slice(11,13) ==='12'){
     let date = new Date(data.list[i].dt_txt);
@@ -40,7 +48,7 @@ const FiveDay = ({ data }) => {
         return (
           <div className="card">
            <div className='day'> <p>{elem.day}</p></div>
-           <div className='five-day-img-container'> <img className='five-day-img' src={`http://openweathermap.org/img/w/${elem.icon}.png`}/></div>
+           <div className='five-day-img-container'> <img className='five-day-img' src={`http://openweathermap.org/img/w/${elem.icon}.png`} alt='forecast-icon'/></div>
             <div className='temp'>
               {elem.max_temp}&deg;
               

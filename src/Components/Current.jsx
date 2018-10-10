@@ -1,7 +1,8 @@
-import React, { Component } from "react";
 import "../Stylesheets/Current.css";
+import React from 'react'
 const Current = ({ data, metric }) => {
-    // console.log(data, data.data)
+
+  // using the days array to help display the abbreviated day
   let days = [
     "SUNDAY",
     "MONDAY",
@@ -11,6 +12,8 @@ const Current = ({ data, metric }) => {
     "FRIDAY",
     "SATURDAY"
   ];
+
+  // using these variables to get date displayed as 'DD/MM/YYYY'
   let date = new Date();
   let month = date.getUTCMonth() + 1; //month from 1-12
   let day = date.getUTCDate();
@@ -53,6 +56,7 @@ const Current = ({ data, metric }) => {
         <div className="middle-center">
           <img
             src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
+            alt='current-weather-icon'
           />
 
           <p className="weather-description"> {data.weather[0].description}</p>
