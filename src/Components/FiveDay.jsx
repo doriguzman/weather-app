@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './FiveDay.css'
+import '../Stylesheets/FiveDay.css'
 const FiveDay = ({ data }) => {
   
   // the data.list return an array of 40 objects

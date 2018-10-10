@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Current.css";
+import "../Stylesheets/Current.css";
 const Current = ({ data, metric }) => {
     // console.log(data, data.data)
   let days = [

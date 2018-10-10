@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import FiveDay from "./FiveDay";
-import Current from "./Current";
+import FiveDay from "./Components/FiveDay";
+import Current from "./Components/Current";
 import './Current.css'
 
 

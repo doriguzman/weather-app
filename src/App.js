@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Stylesheets/App.css";
 import axios from "axios";
-// import Weather from "./Weather";
-import FiveDay from "./FiveDay";
-import Current from "./Current";
+import FiveDay from "./Components/FiveDay";
+import Current from "./Components/Current";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -66,7 +66,6 @@ class App extends React.Component {
   };
 
   handleSubmit = e => {
-    console.log("submitting");
     this.setState({
       city: this.state.input
     });
@@ -74,18 +73,13 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     const {
       input,
-      city,
-      current,
-      metric,
-      submitted,
-      unitFormat,
       errorMessage,
       valid,
       currentData,
-      fiveDayData
+      fiveDayData,
+      metric
     } = this.state;
     return (
       <div className="App">
@@ -138,7 +132,7 @@ class App extends React.Component {
         </div>
 
         {valid ? (
-          <div>
+          <div className='weather-container'>
             <Current data={currentData} metric={metric} />
             <FiveDay data={fiveDayData} />
           </div>
