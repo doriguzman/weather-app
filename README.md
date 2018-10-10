@@ -33,8 +33,10 @@
 * Implement usage of zipcodes.
 
 * Use the Five Day Forecast API to full extent:
-    *  OnClick of day it would expand and show the weather every 3 hours for that day. 
-    
+    *  OnClick of day it would expand and show the weather every 3 hours for that day.
+
+* Make the site responsive.
+
 * Fix CSS of submit bar to be more visually appealing. 
 
 
