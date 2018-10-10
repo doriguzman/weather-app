@@ -2,10 +2,8 @@
 html {
   min-height: 100%;
   position: relative;
-}
-
-body {
-  background: linear-gradient(
+ 
+    background: linear-gradient(
     to bottom,
     #01758e 0%,
     #027f96 6%,
@@ -23,6 +21,9 @@ body {
     #2cb8b7 89%,
     #3bc6bd 100%
   );
+}
+
+body {
   font-family: "PT Sans Narrow", sans-serif;
   color: white;
 }
@@ -114,7 +115,7 @@ button:hover {
     /* background-color: #528392; */
     background-color: #3b8a9a;
   font-size: 25px;
-  width: 99%;
+  width: 99.2%;
   /* margin-top:5px; */
   display: inline-flex;
   padding-left: 15px;
@@ -125,6 +126,7 @@ button:hover {
 
 .title-top {
   width:15%;
+  padding-left:15px
 }
 .location-top {
   width: 30%;
