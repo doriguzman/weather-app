@@ -20,20 +20,19 @@ IMAGE
 
 * People use different units to measure temperature, so I'm giving people the option to choose their preferred measurement through radio buttons. 
 
-*  For the *Current Weather* I wanted to display only the most important data as to not overwhelm the user. 
-    *  Thus only displaying: day/date, weather description, wind speed,  humidity, and high/lows for that day. 
+*  For the *Current Weather* I wanted to display only the most important data as to not overwhelm the user.Thus only displaying: day/date, weather description, wind speed,  humidity, and high/lows for that day. 
    
  
 
 ## Tradeoffs: 
 * The Five Day API returned the weather forecast for 5 days with data every 3 hours by city name- which was a lot of information.    Therefore, I decided to only display the five day weather at the peak time in the day (which is 12pm). 
 
-* I wanted to display the high/lows for the five days, however the five day forecast api stated that the min/max temperature they provided are the mean min/max temperatures in the city at that moment- which they provided to see the deviation from the temperature they give for reference. 
+* I wanted to display the high/lows for the five days, however the Five Day Forecast API stated that the min/max temperature they provided are the mean min/max temperatures in the city at that moment- which they provided to see the deviation from the temperature they give for reference. 
 
 ## Future Features:
 * Implement usage of zipcodes.
 * Use the Five Day Forecast API to full extent:
-       -OnClick of day it would expand and show the weather every 3 hours for that day. 
+    *  OnClick of day it would expand and show the weather every 3 hours for that day. 
 * Fix CSS of submit bar to be more visually appealing. 
 
 
