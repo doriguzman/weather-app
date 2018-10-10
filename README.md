@@ -4,15 +4,13 @@
 
 # Weather App
 
-Landing Page 
 <img src="./public/weather-1.png" />
 
 
-Once a valid city is submitted
 <img src="./public/weather-2.png" />
 
 
-IMAGE 
+ 
 
 ## Thought Process on App
 
