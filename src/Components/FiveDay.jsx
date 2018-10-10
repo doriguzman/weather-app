@@ -18,16 +18,13 @@ const FiveDay = ({ data }) => {
     "SAT"
   ];
 
-
   // the data.list return an array of 40 objects
   //we are retrieving the weather data everyday at 12pm
-
   for (let i = 0; i < data.list.length; i ++) {
       if(data.list[i].dt_txt.slice(11,13) ==='12'){
     let date = new Date(data.list[i].dt_txt);
 
     let day = {
-        reg:data.list[i].dt_txt,
       day: days[date.getDay()],
       icon: data.list[i].weather[0].icon,
       temp: Math.round(data.list[i].main.temp),
@@ -41,7 +38,6 @@ const FiveDay = ({ data }) => {
   }
 }
 
-  console.log(obj);
   return (
     <div className="five-day-weather">
       {obj.map(elem => {
@@ -50,10 +46,7 @@ const FiveDay = ({ data }) => {
            <div className='day'> <p>{elem.day}</p></div>
            <div className='five-day-img-container'> <img className='five-day-img' src={`http://openweathermap.org/img/w/${elem.icon}.png`} alt='forecast-icon'/></div>
             <div className='temp'>
-              {elem.max_temp}&deg;
-              
-              {/* {elem.min_temp} */}
-            
+              {elem.temp}&deg;            
             </div>
           </div>
         );

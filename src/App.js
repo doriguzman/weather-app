@@ -84,9 +84,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className={valid ? "submit-top" : "submit-center"}>
-          {/* submit-center */}
           <div className={valid ? "title-top" : "title-center"}>
-            {" "}
             <h2> Weather App</h2>{" "}
           </div>
           <div className={valid ? "location-top" : "location-center"}>
@@ -108,16 +106,14 @@ class App extends React.Component {
             <div
               className={valid ? "error-message-top" : "error-message-center"}
             >
-              {errorMessage}{" "}
+              {errorMessage}
             </div>
           </div>
 
           <div className={valid ? "metric-top" : "metric-center"}>
-            {/* <label>Metric:</label> */}
             {this.radioOptions.map(value => (
               <span>
-                {" "}
-                {value}{" "}
+                {value}
                 <input
                   className="radio"
                   type="radio"
@@ -127,12 +123,12 @@ class App extends React.Component {
                   onChange={this.handleInput}
                 />
               </span>
-            ))}{" "}
+            ))}
           </div>
         </div>
 
         {valid ? (
-          <div className='weather-container'>
+          <div className="weather-container">
             <Current data={currentData} metric={metric} />
             <FiveDay data={fiveDayData} />
           </div>
