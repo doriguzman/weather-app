@@ -5,10 +5,12 @@
 # Weather App
 
 Landing Page 
-<img src="./public/preview/home.png" />
-IMG
+<img src="./public/weather-1.png" />
+
 
 Once a valid city is submitted
+<img src="./public/weather-2.png" />
+
 
 IMAGE 
 
