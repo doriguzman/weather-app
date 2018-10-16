@@ -18,7 +18,7 @@ const Current = ({ data, metric }) => {
   let month = date.getUTCMonth() + 1; //month from 1-12
   let day = date.getUTCDate();
   let year = date.getUTCFullYear();
-  let fullDate = day + "/" + month + "/" + year;
+  let fullDate = month + "/" + day + "/" + year;
   let currentDay = days[date.getDay()];
 
   return (
