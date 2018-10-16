@@ -85,10 +85,10 @@ class App extends React.Component {
       <div className="App">
         <div className={valid ? "submit-top" : "submit-center"}>
           <div className={valid ? "title-top" : "title-center"}>
-            <h2> Weather App</h2>{" "}
+            Weather App
           </div>
           <div className={valid ? "location-top" : "location-center"}>
-            <label>City</label>
+            <label className={valid ? "label-top" : "label-center"}>City</label>
             <input
               className={valid ? "text-input-top" : "text-input-center"}
               type="text"

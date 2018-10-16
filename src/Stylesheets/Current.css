@@ -4,7 +4,7 @@
     padding-right: 2px;
     padding-bottom: 70px;
     margin-top: -2px;
-    width:100%;
+    width:99.8%;
     background-image: url(https://images.pexels.com/photos/412462/pexels-photo-412462.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -20,7 +20,8 @@
     padding:10px;
     margin:0 auto;
     width:65%;
-    height:43vh;
+    height:60%;
+    position:relative
 
 }
 

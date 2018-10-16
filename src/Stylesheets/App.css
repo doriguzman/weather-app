@@ -1,11 +1,8 @@
-
-
-
 html {
   min-height: 100%;
-  position:relative ;
- 
-    background: linear-gradient(
+  position: relative;
+
+  background: linear-gradient(
     to bottom,
     #01758e 0%,
     #027f96 6%,
@@ -26,15 +23,16 @@ html {
   background-repeat: no-repeat;
 }
 
-
-
 body {
   font-family: "PT Sans Narrow", sans-serif;
   color: white;
 }
 
 .title-center {
-  margin-bottom: -40px;
+  /* margin-bottom: -40px; */
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 .submit-center {
   text-align: center;
@@ -53,8 +51,8 @@ body {
 .location-center {
   width: 100%;
 }
-label{
-  display:inline flex;
+label {
+  display: inline flex;
 }
 
 .text-input-center {
@@ -87,11 +85,11 @@ button:hover {
   background: #0b7dda;
 }
 
-.error-message-center{
+.error-message-center {
   width: 100%;
   font-size: 18px;
- margin-top:10px;
-  
+  margin-top: 10px;
+
   color: black;
   padding-bottom: 10px;
 }
@@ -109,40 +107,44 @@ button:hover {
 /* when header is at the top */
 
 .submit-top {
-    /* box-shadow:1px 6px 500px 20px #09697cc9;
+  /* box-shadow:1px 6px 500px 20px #09697cc9;
   border-radius:5px;
   background-color:#07859e; */
-    /* background-color: #528392; */
-   box-shadow: 1px 100px 500px 20px #4a656a;
-    border-radius: 6px;
-    border-bottom: 2px solid #205666;
-    /* background-color: #528392; */
-    background-color: #3b8a9a;
+  /* background-color: #528392; */
+  box-shadow: 1px 100px 500px 20px #4a656a;
+  border-radius: 6px;
+  border-bottom: 2px solid #205666;
+  /* background-color: #528392; */
+  background-color: #3b8a9a;
   font-size: 25px;
-  width: 99.2%;
-  /* margin-top:5px; */
-  display: inline-flex;
-  padding-left: 15px;
-  align-items: baseline;
+  width: 98.6%;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  
+  position: relative;
 }
 
 .title-top {
-  width:15%;
-  padding-left:15px
+  width: 25%;
+  padding-left: 15px;
 }
 .location-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 30%;
   font-size: 28px;
-  margin-bottom:5px;
-  margin-left: 5%;
+  margin-left: 3%;
+  margin-right: 8%;
 }
 
 .text-input-top {
   margin-left: 10px;
   border-radius: 5px;
-  width: 60%;
+  width: 65%;
   height: 10px;
   border: 1px solid grey;
   font-family: "PT Sans Narrow", sans-serif;
@@ -150,10 +152,9 @@ button:hover {
   margin-top: -2px;
   padding: 14px 0px 9px 8px;
   letter-spacing: 1px;
-  display: inline-flex;
 }
 
-.button-top{
+.button-top {
   margin-top: -7px;
   border-radius: 7px;
   border-left: none;
@@ -164,42 +165,69 @@ button:hover {
   width: 10%;
 }
 
-.error-message-top{
- font-size:15px;
- text-align: center;
- margin-left:-15%;
+.error-message-top {
+  font-size: 15px;
+  text-align: center;
+  margin-left: -15%;
 }
 .metric-top {
-  margin-right: 1.5%;
-  font-size: 22px;
-  margin-left: -1%;
+  font-size: 20px;
+  margin-left: 2%;
 }
-@media only screen and (max-width: 800px) and (max-height:530px){
-  
-  html{
-    min-height:  130%;
+
+@media only screen and (max-width: 900px) and (max-height: 530px) {
+  html {
+    min-height: 115%;
   }
-  h2{
-    font-size:1em;
-    margin-top:-10px;
+  .title-center {
+    font-size: 0.9em;
+    margin-top: -10px;
   }
 
- 
-  label{
-    font-size:35px;
+  .label-center {
+    font-size: 33px;
   }
 
-  .text-input-center{
+  .text-input-center {
     height: 20px;
-    font-size:23px;
-  
+    font-size: 23px;
   }
 
-  button{
-    height:42px
+  button {
+    height: 42px;
+    padding: 1px;
   }
-.metric-center{
-  font-size: 23px;
-}
+  .metric-center {
+    font-size: 23px;
+  }
+  /* ---------submit bar is on top -------------- */
+
+  .submit-top {
+    height: 65px;
+    font: size 10px;
+  }
+
+  .title-top {
+    font-size: 18px;
+  }
+
+  .text-input-top {
+    height: 4px;
+    font-size: 18px;
+  }
+
+  .button-top {
+    width: 17%;
+    font-size: 14px;
+    height: 30px;
+    margin-top: -2px;
+  }
+  .label-top {
+    font-size: 18px;
+  }
+
+  .metric-top {
   
+    font-size: 15px;
+  }
 }
