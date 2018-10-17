@@ -50,6 +50,10 @@
     
     .five-day-weather{
         width:60%;
+        height: 23%;
+    }
+    .five-day-img {
+        width: 80%;
     }
 }
 
@@ -80,8 +84,12 @@
 } */
 
 @media only screen and (max-width: 595px)  {
+
     .five-day-weather{
         width:70%;
+    }
+    .card{
+        font-size:20px;
     }
 }
 
@@ -92,11 +100,7 @@
     }
 } */
 
-@media only screen and (max-width: 595px)  {
-    .five-day-weather{
-        width:72%;
-    }
-}
+
 
 @media only screen and (max-width: 330px)  {
     .five-day-weather{
