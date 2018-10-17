@@ -119,7 +119,7 @@ button:hover {
   background-color: #3b8a9a;
   font-size: 60px;
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -131,23 +131,28 @@ button:hover {
 }
 
 .title-top {
-  width: 25%;
-  padding-left: 40px;
+  /* width: 25%;
+  padding-left: 40px; */
+  visibility: hidden;
+  width:0px;
+  margin:0;
+  height:0px;
 }
 .location-top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 40%;
-  font-size: 50px;
-  margin-left: 5%;
-  margin-right: 8%;
+  width: 63%;
+  font-size: 40px;
+    margin-left: 5%;
+  /* margin-left: 5%;
+  margin-right: 8%; */
 }
 
 .text-input-top {
   margin-left: 15px;
   border-radius: 5px;
-  width: 55%;
+  width: 45%;
   height: 40px;
   border: 1px solid grey;
   font-family: "PT Sans Narrow", sans-serif;
@@ -177,12 +182,70 @@ button:hover {
   /* height:40px; */
 }
 .metric-top {
-  font-size: 43px;
-  margin-left: -3%;
+  font-size: 35px;
+  /* margin-left: -5%; */
   margin-right: 4%;
 }
 
-@media only screen and (max-width: 2358px) {
+@media only screen and (max-width: 1191px) {
+.metric-top{
+  margin-left:-11%
+}
+}
+
+@media only screen and (max-width: 990px) {
+  .metric-top{
+    margin-left:-15%
+  }
+
+  .location-top{
+    margin-left:2%;
+  }
+  }
+
+
+  @media only screen and (max-width: 860px) {
+    .metric-top{
+      margin-left:7%
+    }
+  
+    .location-top{
+      margin-left:8%;
+    }
+    }
+
+    @media only screen and (max-width: 415px) {
+
+      .submit-top{
+       height: 40px;
+      }
+      .metric-top{
+        margin-left:5%;
+        font-size:15px
+      }
+    
+      .location-top{
+        margin-left:8%;
+        font-size:20px;
+        width:65%
+      }
+      .text-input-top {
+            margin-left: 10px;
+            width: 55%;
+        height:5px;
+        font-size:20px;
+        padding-left:0px;
+      }
+      .button-top{
+        height:30px;
+        font-size: 10px;
+      }
+      .metric-top{
+        margin-left:12%;
+        margin-right:0%;
+      }
+      }
+/* @media only screen and (max-width: 2358px) {
   .location-top {
     width: 35%;
     margin-right: 5%;
@@ -192,10 +255,10 @@ button:hover {
     font-size: 40px;
     margin-right: 5%;
   }
-}
+} */
 
 
-@media only screen and (max-width: 1623px) {
+/* @media only screen and (max-width: 1623px) {
 
   .submit-top{
     font-size:50px;
@@ -217,9 +280,9 @@ button:hover {
     margin-right: 5%;
   }
 
-}
+} */
 
-@media only screen and (max-width: 1400px) {
+/* @media only screen and (max-width: 1400px) {
 
  
   .submit-top {
@@ -233,8 +296,7 @@ button:hover {
   }
 }
 
-
-
+ 
 
 @media only screen and (max-width: 875px)  {
   html {
@@ -260,10 +322,10 @@ button:hover {
   }
   .metric-center {
     font-size: 23px;
-  }
+  } */
   /* ---------submit bar is on top -------------- */
 
-  .submit-top {
+  /* .submit-top {
     height: 65px;
     font-size: 10px;
   }
@@ -299,4 +361,4 @@ button:hover {
     font-size: 15px;
     margin-left: 10px;
   }
-}
+} */
