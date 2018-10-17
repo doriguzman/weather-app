@@ -106,7 +106,9 @@ class App extends React.Component {
             <div
               className={valid ? "error-message-top" : "error-message-center"}
             >
+           
               {errorMessage}
+             
             </div>
           </div>
 
@@ -125,6 +127,7 @@ class App extends React.Component {
               </span>
             ))}
           </div>
+  
         </div>
 
         {valid ? (

@@ -3,6 +3,7 @@ import '../Stylesheets/FiveDay.css'
 
 
 const FiveDay = ({ data }) => {
+  console.log(data)
   
   // constructing an array of day objects
   let obj = [];
@@ -20,8 +21,9 @@ const FiveDay = ({ data }) => {
 
   // the data.list return an array of 40 objects
   //we are retrieving the weather data everyday at 12pm
-  for (let i = 0; i < data.list.length; i ++) {
-      if(data.list[i].dt_txt.slice(11,13) ==='12'){
+  //UPDATE retrieving at every 8 increments for new day
+  for (let i = 0; i < data.list.length; i +=8) {
+      // if(data.list[i].dt_txt.slice(11,13) ==='12'){
     let date = new Date(data.list[i].dt_txt);
 
     let day = {
@@ -35,7 +37,7 @@ const FiveDay = ({ data }) => {
       description: data.list[i].weather[0].description
     };
     obj = [...obj, day];
-  }
+  // }
 }
 
   return (
@@ -53,6 +55,6 @@ const FiveDay = ({ data }) => {
       })}
     </div>
   );
-};
+}
 
 export default FiveDay;

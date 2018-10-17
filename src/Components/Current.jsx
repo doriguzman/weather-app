@@ -43,7 +43,7 @@ const Current = ({ data, metric }) => {
             <br />
             <span className="full-date">{fullDate} </span>
           </p>
-
+          <br/>
           <p className="weather-details">
             <span>
               Wind: {data.wind.speed}{" "}
@@ -57,6 +57,7 @@ const Current = ({ data, metric }) => {
           <img
             src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}
             alt='current-weather-icon'
+            className='current-weather-img'
           />
 
           <p className="weather-description"> {data.weather[0].description}</p>
