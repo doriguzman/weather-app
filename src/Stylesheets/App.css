@@ -125,7 +125,7 @@ button:hover {
   align-items: center;
 
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   padding-top: 30px;
 }
@@ -142,9 +142,10 @@ button:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 63%;
+  width: 35%;
   font-size: 40px;
     margin-left: 5%;
+    margin-right:2%;
   /* margin-left: 5%;
   margin-right: 8%; */
 }
@@ -152,7 +153,7 @@ button:hover {
 .text-input-top {
   margin-left: 15px;
   border-radius: 5px;
-  width: 45%;
+  width: 65%;
   height: 40px;
   border: 1px solid grey;
   font-family: "PT Sans Narrow", sans-serif;
@@ -187,15 +188,45 @@ button:hover {
   margin-right: 4%;
 }
 
+@media only screen and (max-width: 1448px) {
+
+
+.text-input-top{
+  height:20px;
+  font-size:30px;
+  width:55%;
+}
+.button-top {
+
+  height: 50px;
+  padding: 0px;
+  vertical-align: middle;
+  font-size: 20px;
+  width: 10%;
+}
+
+.error-message-top {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 7%;
+  width: 65%;
+}
+
+.metric-top{
+  font-size: 30px;
+}
+}
+
 @media only screen and (max-width: 1191px) {
 .metric-top{
-  margin-left:-11%
+  /* margin-left:-11% */
 }
+
 }
 
 @media only screen and (max-width: 990px) {
   .metric-top{
-    margin-left:-15%
+    /* margin-left:-15% */
   }
 
   .location-top{
@@ -214,16 +245,83 @@ button:hover {
     }
     }
 
-    @media only screen and (max-width: 415px) {
+    @media only screen and (max-width: 798px){
 
+      label{
+        font-size:28px;
+      }
+      .text-input-top{
+        height:18px;
+        font-size:25px;
+        width:55%;
+      }
+      .button-top {
+      
+        height: 45px;
+        padding: 0px;
+        vertical-align: middle;
+        font-size: 20px;
+        width: 10%;
+      }
+      
+      .error-message-top {
+        font-size: 13px;
+        text-align: center;
+        margin-left: 17%;
+        width: 65%;
+      }
+      
+      .metric-top{
+        font-size: 25px;
+      }
+    }
+
+    @media only screen and (max-width: 680px){
+
+      label{
+        font-size:25px;
+      }
+
+      .location-top{
+        width:55%;
+        margin-left:5%;
+      }
+      .text-input-top{
+        height:15px;
+        font-size:20px;
+        width:55%;
+      }
+      .button-top {
+      
+        height: 43px;
+        padding: px;
+        vertical-align: middle;
+        font-size: 20px;
+        width: 13%;
+      }
+      
+      .error-message-top {
+        font-size: 13px;
+        text-align: center;
+        margin-left: 17%;
+        width: 65%;
+      }
+      
+      .metric-top{
+        font-size: 22px;
+        /* width:40%; */
+      }
+    }
+
+    @media only screen and (max-width: 470px){
       .submit-top{
-       height: 40px;
+        height: 40px;
       }
       .metric-top{
         margin-left:5%;
         font-size:15px
       }
-    
+         
       .location-top{
         margin-left:8%;
         font-size:20px;
@@ -240,11 +338,9 @@ button:hover {
         height:30px;
         font-size: 10px;
       }
-      .metric-top{
-        margin-left:12%;
-        margin-right:0%;
-      }
-      }
+  
+    }
+
 /* @media only screen and (max-width: 2358px) {
   .location-top {
     width: 35%;
